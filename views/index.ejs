@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Inpo padu🤞🏻🤞🏻</h1>
+    <table border="1px">
+        <tr>
+            <th>Nama</th>
+            <th>Skill</th>
+            <th>Usia</th>
+        </tr>
+        <% data.forEach(item=> { %>
+            <tr>
+                <td>
+                    <%= item.nama %>
+                </td>
+                <td>
+                    <%= item.jenis %>
+                </td>
+                <td>
+                    <%= item.usia %>
+                </td>
+            </tr>
+            <% }); %>
+    </table>
+    <p>Filter binatang yang ada huruf 'a':
+        <% const pilter=data.filter((data)=>data.nama.includes('a')) %>
+            <% pilter.forEach((item)=> { %>
+                <%= item.nama %> 🔥
+                    <% }); %>
+    </p>
+    <h2>inputan pak</h2>
+    <form action="/tambahdata" method="post">
+        <label for="nama">nama: </label>
+        <input type="text" name="nama" id="nama">
+        <br>
+        <label for="jenis">jenis: </label>
+        <input type="text" name="jenis" id="jenis">
+        <br>
+        <label for="usia">usia: </label>
+        <input type="text" name="usia" id="usia">
+        <button type="submit">yowaimoo🤞🏻</button>
+    </form>
+</body>
+
+</html>
